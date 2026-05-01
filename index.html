@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aumora</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Poppins;background:#fdf6ef}
+
+/* Banner */
+.marquee{background:#f3e5d8;overflow:hidden;white-space:nowrap}
+.marquee span{display:inline-block;padding:10px;animation:scroll 12s linear infinite}
+@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+/* Navbar */
+nav{display:flex;justify-content:space-between;padding:15px 30px;background:white;position:sticky;top:0;z-index:10}
+nav a{margin:0 10px;cursor:pointer}
+
+/* Pages */
+.page{display:none}
+.active{display:block}
+
+/* Hero */
+.hero{height:90vh;position:relative}
+.hero img{width:100%;height:100%;object-fit:cover;filter:brightness(60%)}
+.hero-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:white;text-align:center}
+
+/* Buttons */
+.btn{background:#c9a97c;color:white;padding:10px;border:none;border-radius:8px;cursor:pointer}
+
+/* Products */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px}
+.card{background:white;padding:15px;border-radius:20px;box-shadow:0 10px 20px rgba(0,0,0,0.08)}
+.card img{width:100%;border-radius:15px}
+
+/* Cart */
+.cart{position:fixed;right:20px;bottom:20px;background:white;padding:20px;width:300px;border-radius:20px;max-height:80vh;overflow:auto;z-index:20}
+
+/* WhatsApp */
+.whatsapp{position:fixed;left:20px;bottom:20px;background:#25D366;color:white;padding:12px;border-radius:50%;cursor:pointer}
+
+/* ABOUT */
+.about-box{background:#fff7ef;padding:25px;border-radius:18px;margin-bottom:25px;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.highlight{background:#f3e5d8;padding:4px 8px;border-radius:6px}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin:25px 0}
+.about-card{background:#fff7ef;padding:20px;border-radius:18px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+</style>
+</head>
+
+<body>
+
+<div class="marquee"><span>✨ Free Gift above ₹1000 ✨ Shipping ₹100 ✨ Aumora Candles ✨</span></div>
+
+<nav>
+<div style="display:flex;align-items:center;gap:10px;">
+<img src="https://i.postimg.cc/gjZYMzdx/aumora.png" style="height:45px;">
+<b>Aumora</b>
+</div>
+<div>
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('shop')">Shop</a>
+<a onclick="showPage('about')">About</a>
+</div>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page active">
+<div class="hero">
+<img src="https://img.freepik.com/free-photo/cozy-composition-with-candles-knitted-element-garland_169016-48476.jpg">
+<div class="hero-text">
+<h1>Aumora Candles</h1>
+<button class="btn" onclick="showPage('shop')">Shop Now</button>
+</div>
+</div>
+</div>
+
+<!-- SHOP -->
+<div id="shop" class="page">
+<h2 style="padding:20px">Shop</h2>
+<div id="products" class="grid"></div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+<div style="padding:40px;max-width:900px;margin:auto">
+
+<h2 style="text-align:center">About Aumora</h2>
+
+<div class="about-box">
+<p><span class="highlight">Hi there! We're so glad you're here.</span> At Aumora Candles, we believe candles transform moments into warmth.</p>
+</div>
+
+    🕯️
+    <h3>Welcome to Aumora Candles</h3>
+    <p>
+    Hi there! We're so glad you're here. At Aumora Candles, we believe that the right candle can transform any space — turning an ordinary moment into something warm, memorable, and entirely your own.
+    </p>
+    </div>
+    
+    <div class="about-box">
+    <p>
+    Every candle we make is <span class="highlight">100% handmade</span>, carefully crafted in small batches to ensure quality you can see, smell, and feel. From the wax to the wick, each piece is poured with intention — no two are ever quite the same.
+    </p>
+    </div>
+    
+    <div class="about-grid">
+    
+    <div class="about-card">
+    <h4>✨ Unique designs</h4>
+    <p>No mass production — every candle is one of a kind</p>
+    </div>
+    
+    <div class="about-card">
+    <h4>🌸 Rich scents</h4>
+    <p>Carefully blended fragrances for every mood</p>
+    </div>
+    
+    <div class="about-card">
+    <h4>🤍 Made with love</h4>
+    <p>Handpoured with care, from our hands to your home</p>
+    </div>
+    
+    </div>
+    
+    <div class="about-box">
+    <p>
+    Aumora Candles was born from a simple idea: that beautiful, high-quality candles shouldn't have to come from a big brand. Our little company was started by <span class="highlight">two teenagers</span> with a shared passion for creativity, fragrance, and making something truly special.
+    </p>
+    </div>
+    
+    <div class="about-box">
+    <p>
+    What began as a hobby quickly turned into something we love sharing with the world.
+    </p>
+    </div>
+    
+    <div class="about-box">
+    <p>
+    We're just getting started — and we can't wait for you to find your <span class="highlight">perfect flame</span>. 🕯️
+    </p>
+    </div>
+    
+    </div>
+    </div>
+<!-- CHECKOUT -->
+<div id="checkout" class="page">
+<div style="padding:30px;max-width:500px;margin:auto">
+<h2>Checkout</h2>
+
+<form id="orderForm" action="https://formspree.io/f/xreppyzr" method="POST">
+
+<input type="hidden" name="_subject" value="🔥 New Aumora Order">
+<input type="hidden" name="Order Details" id="cartData">
+<input type="hidden" name="Order Time (IST)" id="orderTime">
+
+<input name="name" placeholder="Name" required style="width:100%;margin:10px;padding:10px">
+<input name="phone" placeholder="Phone" required style="width:100%;margin:10px;padding:10px">
+<textarea name="address" placeholder="Address" required style="width:100%;margin:10px;padding:10px"></textarea>
+
+<p>UPI: 9999655540@mbk</p>
+<p>Total ₹<span id="finalTotal">0</span></p>
+
+<input name="utr" placeholder="Enter UTR" required style="width:100%;margin:10px;padding:10px">
+
+<button type="submit" class="btn">Place Order</button>
+
+</form>
+</div>
+</div>
+
+<!-- CART -->
+<div class="cart">
+<h3>Cart</h3>
+<div id="cartItems"></div>
+<p id="giftMsg"></p>
+<p>Total ₹<span id="total">0</span></p>
+<button class="btn" onclick="checkout()">Checkout</button>
+</div>
+
+<div class="whatsapp" onclick="window.open('https://wa.me/919999655540')">💬</div>
+
+<script>
+function showPage(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+const scents=["Rose","Jasmine","Mogra","Marigold","Strawberry","Green Apple","Lime","Vanilla","Sandalwood","Lavender","Lemongrass"];
+
+const products=[
+{name:"Velvet Heart Candle",price:340,img:"https://i.postimg.cc/vHYTLZ0k/heart-candle.jpg"},
+{name:"Mixed Fruit Essence Candle",price:309,img:"https://i.postimg.cc/hGdtPzG0/IMG-4231.jpg"},
+{name:"Pink Rose Cup",price:299,img:"https://i.postimg.cc/W4k1bF4w/IMG-4311.jpg"},
+{name:"Sandalwood Candle",price:699,img:"https://i.postimg.cc/cJnL4gJm/IMG-4314.jpg"},
+{name:"Floral White Candle",price:699,img:"https://i.postimg.cc/2yzkw07W/IMG-4315.jpg"},
+{name:"Rose Gold Bowl",price:399,img:"https://i.postimg.cc/vTQYz0tW/IMG-4318.jpg"},
+{name:"Golden Pineapple Candle",price:299,img:"https://i.postimg.cc/B6fQ8S8g/pineapple-candle.jpg"},
+{name:"Pomegranate Ember Candle",price:490,img:"https://i.postimg.cc/0Q126k6L/pomegranate-candle.jpg"},
+{name:"Strawberry Ember Candle",price:490,img:"https://i.postimg.cc/k4NMK08k/strawberry-candle.jpg"},
+{name:"Botanical Bloom Candle",price:199,img:"https://hercules-cdn.com/file_Vr3tRh3r9TDkBKRVNUC3o1hw"},
+{name:"Cloud Cube Candle",price:309,img:"https://hercules-cdn.com/file_KxiMGYgsH1Z42WC9ToggKO1o"},
+{name:"Mini Scent Discovery (40g)",price:99,img:"https://hercules-cdn.com/file_iVF9uhtlIzt72tMvA0UGV3Wf"},
+{name:"Coconut Collection (Pack of 3)",price:909,img:"https://hercules-cdn.com/file_XPLUL32JqJq2Tcd3xZC35VlN"},
+{name:"Orange Ember Candle",price:349,img:"https://i.postimg.cc/XqbNXrtD/Screenshot-2026-05-01-at-11-48-56-PM.png"},
+{name:"Flower Ember Candle",price:199,img:"https://i.postimg.cc/QMTdx9Mc/IMG-4230.jpg"},
+{name:"Ocean Candle",price:309,img:"https://i.postimg.cc/3NK8BtFX/IMG-4368.jpg"}
+];
+
+let cart=[];
+
+function loadProducts(){
+let html="";
+products.forEach((p,i)=>{
+let options=scents.map(s=>`<option>${s}</option>`).join("");
+html+=`<div class="card">
+<img src="${p.img}">
+<h3>${p.name}</h3>
+<p>₹${p.price}</p>
+<select id="scent-${i}">${options}</select>
+<button class="btn" onclick="add(${i})">Add</button>
+</div>`;
+});
+document.getElementById("products").innerHTML=html;
+}
+loadProducts();
+
+function add(i){
+let scent=document.getElementById("scent-"+i).value;
+cart.push({...products[i],qty:1,scent});
+update();
+}
+
+function update(){
+let html="";let total=0;
+
+cart.forEach((item)=>{
+if(item.price!==0) total+=item.price;
+html+=`${item.name} (${item.scent}) - ${item.price===0?"FREE 🎁":"₹"+item.price}<br>`;
+});
+
+document.getElementById("cartItems").innerHTML=html;
+document.getElementById("total").innerText=total;
+
+if(total>=1000 && !window.gift){
+document.getElementById("giftMsg").innerHTML="🎁 Free Gift <button onclick='spin()'>Claim</button>";
+}
+}
+
+function spin(){
+let rand=Math.floor(Math.random()*products.length);
+cart.push({...products[rand],price:0,scent:"Free Gift 🎁"});
+window.gift=true;
+update();
+}
+
+function checkout(){
+showPage('checkout');
+document.getElementById("finalTotal").innerText=
+cart.reduce((t,i)=>t+i.price,0)+100;
+}
+
+document.getElementById("orderForm").addEventListener("submit",function(){
+let formattedCart = cart.map(item =>
+`${item.name} (${item.scent}) - ${item.price===0 ? "FREE 🎁" : "₹"+item.price}`
+).join("\n");
+
+document.getElementById("cartData").value = formattedCart;
+document.getElementById("orderTime").value =
+new Date().toLocaleString("en-IN",{timeZone:"India"});
+});
+</script>
+
+</body>
+</html>
